@@ -33,51 +33,55 @@ class Data_Collection_Engine:
         "apps":""
 
     }
-
-  
-
-    # Collect user age, gender, education and profession.
-    # this function uses a process to collect data from the user 
-    # Data Fields : Device info, o.s type
-    # Types of Data: Photos , videos ,docuemnts apps
-    # Types of operations : User interactivity, number of users, types of users, utility of gadget (This process is subject to continouus
-    # development and improvement)
-
-     number_of_fields=len(User_Profile)
-
-     def user_device_data(self):
-
-         # This function collects data for identify the device 
-        
-        for i in self.Device_Data.keys:
-            
-          self.Device_Data.values=str(input())
-                                     
-        print(self.User_Profile)
-
-
-        
-     def user_profile(self,user):
+     
+# function collects data for user_profile creation
+     def user_profile(self):
 
         # This function collects data to build user profile
         # Details collected help form a user Profile to optimize responses to 
         # to user personal needs 
 
-        for i in self.User_Profile:
-            self.Device_Data.values=str(input())
-         
+        for key in self.User_Profile:
+             print("Enter %s"%key)
+             self.User_Profile[key]=str(input())
 
+# function collects data for device_profile creation
+     def user_device_data(self):
+
+         # This function collects data for identify the device 
+        
+        for key in self.Device_Data:
+            
+          print("Enter %s"%key)
+          self.Device_Data[key]=str(input())
+                                    
+           
+     
+  
+# function collects data for user_data_profile creation
      def types_of_data(self):
 
         # This function collects the responses about the types of data the user has / uses 
         # on their smart device
 
-        for i in self.Types_Of_Data:
-            self.Types_Of_Data.values=str(input())
+        for key in self.Types_Of_Data:
 
+            print("Do you use  %s ?"%key)
+            self.Types_Of_Data[key]=str(input())
+     
+    
 
+function_caller= Data_Collection_Engine()
+Data_Display = Data_Collection_Engine()
 
+function_caller.user_profile()       
+function_caller.user_device_data()
+function_caller.types_of_data()  
 
-        self.user_profile()       
-        self.user_device_data()
-        self.types_of_data()  
+print(Data_Display.User_Profile)
+print(Data_Display.Device_Data)
+print(Data_Display.Types_Of_Data)
+
+class Query_Engine:
+
+    data_collected=Data_Collection_Engine()
