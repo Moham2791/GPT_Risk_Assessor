@@ -6,8 +6,8 @@ This project aims to modernize and personalize cybersecurity awareness and train
 
 The system operates across two primary modules, each focused on enhancing cybersecurity understanding and improving individual and organizational security posture.
 
-**Module 1 — Personalized Cybersecurity Awareness
-**
+**Module 1 — Personalized Cybersecurity Awareness**
+
 This module focuses on generating custom cybersecurity awareness content using user-specific data and real-time threat intelligence.
 
 **Process Flow**
@@ -23,7 +23,8 @@ Combine user data with the latest security news to build a contextualized prompt
 
 **Personalized Guidance Delivery**
 Use the LLM to simplify, personalize, and present tailored awareness content.
--------------------------------------------------------------------------------------------------------
+
+
 **Module 2 — LLM-Augmented Vulnerability & Risk Assessment**
 
 This module explores the use of LLMs to identify vulnerabilities and evaluate security risks based on user-provided technical data.
